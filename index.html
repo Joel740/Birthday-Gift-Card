@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+      text-align: center;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 1em;
+      animation: bounce 2s infinite;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+
+    .cake {
+      font-size: 100px;
+      margin-top: 0.5em;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .button {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 2em;
+    }
+
+    .button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Happy Birthday!</h1>
+  <div class="cake">🎂</div>
+  <p>Wishing you a day filled with love, laughter, and happiness!</p>
+
+  <button class="button" onclick="playMusic()">Play Surprise Music</button>
+
+  <audio id="birthdaySong">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function playMusic() {
+      const song = document.getElementById('birthdaySong');
+      song.play();
+    }
+  </script>
+</body>
+</html>
